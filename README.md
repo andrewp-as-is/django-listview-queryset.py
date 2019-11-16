@@ -4,8 +4,9 @@ https://pypi.org/project/python-readme-generator/
 https://pypi.org/project/django-readme-generator/
 -->
 
-[![](https://img.shields.io/badge/language-Python-blue.svg?longCache=True)]()
+[![](https://img.shields.io/pypi/pyversions/django-listview-queryset.svg?longCache=True)](https://pypi.org/project/django-listview-queryset/)
 [![](https://img.shields.io/pypi/v/django-listview-queryset.svg?maxAge=3600)](https://pypi.org/project/django-listview-queryset/)
+[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
 [![Travis](https://api.travis-ci.org/andrewp-as-is/django-listview-queryset.py.svg?branch=master)](https://travis-ci.org/andrewp-as-is/django-listview-queryset.py/)
 
 #### Installation
