@@ -1,22 +1,27 @@
+__all__ = ['ListViewQuerySet', 'ListViewRawQuerySet']
+
+
 import types
 
 from django.db import connection
 from django.db.models.manager import Manager
 from django.db.models.query import QuerySet, RawQuerySet
-import public
+
 
 class CountMixin:
     queryset_count = None
 
-    def setcount(self,count):
+    def setcount(self, count):
         self.queryset_count = count
         return self
+
 
 def count(self):
     return self.queryset_count
 
-@public.add
-class ListViewQuerySet(CountMixin,QuerySet):
+
+class ListViewQuerySet(CountMixin, QuerySet):
+
     @classmethod
     def as_manager(cls):
         def get_queryset(self):
@@ -27,8 +32,9 @@ class ListViewQuerySet(CountMixin,QuerySet):
         manager.count = types.MethodType(count, manager)
         return manager
 
-@public.add
-class ListViewRawQuerySet(CountMixin,RawQuerySet):
+
+class ListViewRawQuerySet(CountMixin, RawQuerySet):
+
     def count(self):
         return self.queryset_count
 

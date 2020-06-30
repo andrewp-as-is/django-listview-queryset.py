@@ -1,14 +1,7 @@
-from setuptools import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='django-listview-queryset',
-    version='2019.11.15',
-    install_requires=[
-        'Django>1.0',
-        'public',
-        'setuptools',
-    ],
-    packages=[
-        'django_listview_queryset',
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
+    packages=setuptools.find_packages()
 )
